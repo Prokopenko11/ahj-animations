@@ -1,0 +1,11 @@
+image: Ubuntu2204
+stack: node 18
+branches:
+  only:
+  - main
+cache: yarn
+install:
+  - yarn install
+build: off
+test_script: 
+  - yarn lint
