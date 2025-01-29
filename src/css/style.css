@@ -1,0 +1,248 @@
+body {
+  padding: 15px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #e0e0e0;
+}
+
+p {
+  margin: 0;
+}
+
+.collapse-container {
+  padding: 20px;
+
+  background-color: #fff;
+}
+
+.collapse-button {
+  padding: 20px;
+  margin-bottom: 15px;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: #fff;
+  background-color: #70b5fa;
+  border: none;
+  border-radius: 10px;
+}
+
+.collapse-button:hover {
+  cursor: pointer;
+  background-color: #5dadfd;
+}
+
+.collapse-text {
+  height: 0;
+
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+
+.chat-container {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+}
+
+.chat-container-button {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  border: none;
+  transition: transform 0.1s linear;
+}
+
+.chat-container-button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.chat-container-button.click {
+  width: 0;
+  height: 0;
+  border-radius: 0;
+}
+
+.chat-container-form {
+  position: relative;
+
+  height: 0;
+  width: 0;
+
+  overflow: hidden;
+  transition: all 0.1s linear;
+}
+
+.chat-container-form.open {
+  height: 400px;
+  width: 400px;
+  padding: 15px;
+
+  transition: all 0.1s linear;
+  border: 1px solid grey;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.chat-container-form-textarea {
+  display: block;
+  padding: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 250px;
+
+  resize: none;
+  border: 1px solid grey;
+  border-radius: 15px;
+}
+
+.chat-container-form-button {
+  padding: 15px;
+  border-radius: 15px;
+  width: 100%;
+
+  font-size: 16px;
+
+  border: 1px solid grey;
+}
+
+.form-close-button {
+  position: absolute;
+  top: 0;
+  right: 10px;
+
+  font-size: 45px;
+}
+
+.form-close-button:hover {
+  cursor: pointer;
+}
+
+.like-button {
+  padding: 15px 20px;
+  width: 150px;
+
+  font-size: 16px;
+
+  color: white;
+  border: none;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.like-button:hover {
+  cursor: pointer;
+  background-color: rgb(242, 2, 2);
+}
+
+.like-container {
+  position: relative;
+  width: 150px;
+  height: 250px;
+}
+
+.like {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+
+  width: 25px;
+  height: 25px;
+
+  transition: all 0.5s ease-out;
+  background-image: url(../img/heart.png);
+  background-size: contain;
+  opacity: 1;
+  animation: likeAnimation 500ms ease-out forwards;
+}
+
+@keyframes likeAnimation {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(var(--endPosX)) translateY(var(--endPosY));
+  }
+}
+
+@keyframes trajectory1 {
+  0% { 
+    transform: translateX(0) translateY(0); 
+  }
+  25% { 
+    transform: translateX(-200%) translateY(-50px); 
+  }
+  50% { 
+    transform: translateX(0) translateY(-100px); 
+  }
+  75% { 
+    transform: translateX(200%) translateY(-150px); 
+  }
+  100% { 
+    transform: translateX(0) translateY(-200px); 
+  }
+}
+
+@keyframes trajectory2 {
+  0% { 
+    transform: translateX(0) translateY(0); 
+  }
+  25% { 
+    transform: translateX(0) translateY(-50px); 
+  }
+  50% { 
+    transform: translateX(200%) translateY(-100px); 
+  }
+  75% { 
+    transform: translateX(-200%) translateY(-150px); 
+  }
+  100% { 
+    transform: translateX(0) translateY(-200px); 
+  }
+}
+
+@keyframes trajectory3 {
+  0% { 
+    transform: translateX(0) translateY(0); 
+  }
+  25% { 
+    transform: translateX(0) translateY(-50px); 
+  }
+  50% { 
+    transform: translateX(-200%) translateY(-100px); 
+  }
+  75% { 
+    transform: translateX(200%) translateY(-150px); 
+  }
+  100% { 
+    transform: translateX(0) translateY(-200px); 
+  }
+}
+
+@keyframes trajectory4 {
+  0% { 
+    transform: translateX(0) translateY(0); 
+  }
+  25% { 
+    transform: translateX(200%) translateY(-50px); 
+  }
+  50% { 
+    transform: translateX(0) translateY(-100px); 
+  }
+  75% { 
+    transform: translateX(-200%) translateY(-150px); 
+  }
+  100% { 
+    transform: translateX(0) translateY(-200px); 
+  }
+}
